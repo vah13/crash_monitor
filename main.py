@@ -82,7 +82,7 @@ def simple_debugger( argv="" ):
 
         # Start a new process for debugging.
         debug.system.scan_processes()
-        for (process, name) in debug.system.find_processes_by_filename("enserver.exe"):
+        for (process, name) in debug.system.find_processes_by_filename(path_exe):
             _pid = process.get_pid()
 
         debug.attach(int(_pid))
